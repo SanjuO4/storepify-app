@@ -21,7 +21,7 @@ const CategoryProduct = () => {
     const getPrductsByCat = async () => {
         try {
             const { data } = await axios.get(
-                `${process.env.REACT_APP_API}/api/v1/product/product-category/${params.slug}`
+                `/api/v1/product/product-category/${params.slug}`
             );
             setProducts(data?.products);
             setCategory(data?.category);
@@ -39,7 +39,7 @@ const CategoryProduct = () => {
     const loadMore = async () => {
         try {
             setLoading(true);
-            const { data } = await axios.get(`${process.env.REACT_APP_API}/api/v1/product/product-list/${page}`);
+            const { data } = await axios.get(`/api/v1/product/product-list/${page}`);
             setLoading(false);
             setProducts([...products, ...data?.products]);
         } catch (error) {
@@ -58,7 +58,7 @@ const CategoryProduct = () => {
                             {products?.map((p) => (
                                 <div className="card m-2" key={p._id}>
                                     <img
-                                        src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${p._id}`}
+                                        src={`/api/v1/product/product-photo/${p._id}`}
                                         className="card-img-top"
                                         alt={p.name}
                                     />

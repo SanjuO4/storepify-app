@@ -20,12 +20,12 @@ const CreateProduct = () => {
     //get all category
     const getAllCategory = async () => {
         try {
-            const { data } = await axios.get(`${process.env.REACT_APP_API}/api/v1/category/get-category`);
+            const { data } = await axios.get(`/api/v1/category/get-category`);
             if (data?.success) {
                 setCategories(data?.category);
             }
         } catch (error) {
-            alert("Something wwent wrong in getting catgeory");
+            alert("Something went wrong in getting catgeory");
         }
     };
 
@@ -45,7 +45,7 @@ const CreateProduct = () => {
             productData.append("photo", photo);
             productData.append("category", category);
             const { data } = axios.post(
-                `${process.env.REACT_APP_API}/api/v1/product/create-product`,
+                `/api/v1/product/create-product`,
                 productData
             );
             if (data?.success) {

@@ -48,7 +48,7 @@ const CartPage = () => {
     const handlePlaceOrder = async () => {
         try {
             setLoading(false);
-            const { data } = await axios.post(`${process.env.REACT_APP_API}/api/v1/product/place-order`, {
+            const { data } = await axios.post(`/api/v1/product/place-order`, {
                 cart,
             });
             localStorage.removeItem("cart");
@@ -84,7 +84,7 @@ const CartPage = () => {
                                 <div className="row card flex-row" key={p._id}>
                                     <div className="col-md-4">
                                         <img
-                                            src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${p._id}`}
+                                            src={`/api/v1/product/product-photo/${p._id}`}
                                             className="card-img-top"
                                             alt={p.name}
                                             width="100%"

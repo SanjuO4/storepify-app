@@ -7,6 +7,7 @@ const SearchInput = () => {
     const [values, setValues] = useSearch();
     const navigate = useNavigate();
 
+    // `${process.env.REACT_APP_API}/api/v1/product/search/${values.keyword}`
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {

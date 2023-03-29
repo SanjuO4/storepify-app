@@ -815,3 +815,17 @@ span {
 .search-form button:hover {
     background: #3F5EFB;
 }
+
+/* ============ search product css ========= */
+.serach-product-cont {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-product-btn {
+    margin: 6px;
+}
