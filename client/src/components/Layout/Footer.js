@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <div className="footer-main">
             <div className="footer">
-                <p>made with <span>❤</span> by <span>Ritik</span></p>
+                <p>made with <span>❤</span> by <span>Sanjay</span></p>
             </div>
         </div>
     )
